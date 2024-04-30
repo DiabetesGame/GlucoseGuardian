@@ -52,5 +52,6 @@ public class HappyCellBox : MonoBehaviour
         //Destroy it after 3 seconds
         yield return new WaitForSeconds(3);
         objToDespawn.gameObject.GetComponent<PooledCell>().ReleaseObject();
+        Debug.Log("Done");
     }
 }
