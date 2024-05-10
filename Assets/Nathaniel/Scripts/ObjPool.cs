@@ -14,6 +14,9 @@ public class ObjPool : MonoBehaviour
     public IObjectPool<PooledObject> pool;
     public bool insulinButtonPressed;
 
+    int totalCount;
+    public int totalNum;
+
     int spawnedObjects;
 
 

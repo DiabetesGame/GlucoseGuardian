@@ -48,10 +48,9 @@ public class HappyCellBox : MonoBehaviour
 
         //Play the animation before we destroy it
         animator.Play("Base Layer.ShrinkAndMove");
-
+        objToDespawn.gameObject.GetComponent<PooledCell>().ReleaseObject();
         //Destroy it after 3 seconds
         yield return new WaitForSeconds(3);
-        objToDespawn.gameObject.GetComponent<PooledCell>().ReleaseObject();
         Debug.Log("Done");
     }
 }
