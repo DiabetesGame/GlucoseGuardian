@@ -73,6 +73,7 @@ public class ObjPool : MonoBehaviour
     private void OnDestroyObj(PooledObject obj)
     {
         Destroy(obj.gameObject);
+        spawnedObjects--;
     }
 
     //Spawns a new object every second

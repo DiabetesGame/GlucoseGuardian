@@ -44,7 +44,7 @@ public class InsulinOpener : MonoBehaviour
             //If the key is released while in the trigger, destroy it and change the material so it looks like it snapped
             if (!grabScript.grabbed && other.CompareTag("InsulinKey"))
             {
-                Destroy(other.gameObject);
+                other.gameObject.GetComponent<PooledObject>().ReleaseObject();
                 ChangeMaterial();
                 openCell.Invoke();
             }
