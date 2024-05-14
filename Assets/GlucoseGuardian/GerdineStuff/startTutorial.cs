@@ -8,15 +8,13 @@ public class startTutorial : MonoBehaviour
     public AudioClip audioClip;
     public GameObject[] objectsToDisableOnClick;
     public GameObject[] objectsToEnableOnClick;
+    public AudioSource audioSource;
 
-    private AudioSource audioSource;
     private bool audioClipPlayed = false;
-    private float elapsedTime = 0f;
     private bool buttonEnabled = false;
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
         audioSource.clip = audioClip;
         audioSource.Play();
     }
@@ -31,14 +29,10 @@ public class startTutorial : MonoBehaviour
         }
 
         // Enable the button after 20 seconds
-        if (buttonEnabled && elapsedTime < 20f)
+        if (buttonEnabled)
         {
-            elapsedTime += Time.deltaTime;
-            if (elapsedTime >= 20f)
-            {
-                // Enable the button
-                GetComponent<Button>().interactable = true;
-            }
+            // Enable the button
+            GetComponent<Button>().interactable = true;
         }
     }
 
@@ -53,6 +47,9 @@ public class startTutorial : MonoBehaviour
         {
             obj.SetActive(true);
         }
+
+        // Enable the audio source
+        audioSource.enabled = true;
 
         // Disable the button
         GetComponent<Button>().interactable = false;
