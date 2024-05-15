@@ -505,6 +505,8 @@ MonoBehaviour:
     type: 3}
   maxPoolSize: 6
   insulinButtonPressed: 0
+  totalCount: 0
+  totalNum: 0
 --- !u!1 &3106487513947783950
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,6 +719,8 @@ MonoBehaviour:
     type: 3}
   maxPoolSize: 5
   insulinButtonPressed: 0
+  totalCount: 0
+  totalNum: 0
 --- !u!1 &4527642573162147548
 GameObject:
   m_ObjectHideFlags: 0

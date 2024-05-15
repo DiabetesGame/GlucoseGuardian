@@ -5898,6 +5898,9 @@ MonoBehaviour:
         m_CallState: 2
   placementMat: {fileID: -876546973899608171, guid: 261f80aa085e10447bf1fcc482529940,
     type: 3}
+  insulin: {fileID: 4947796881344825208}
+  glucose: {fileID: 1196993192752923340}
+  keySlotted: 0
 --- !u!1001 &6382686326378879619
 PrefabInstance:
   m_ObjectHideFlags: 0

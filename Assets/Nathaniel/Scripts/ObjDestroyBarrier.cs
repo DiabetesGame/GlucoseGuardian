@@ -9,7 +9,7 @@ public class ObjDestroyBarrier : MonoBehaviour
 
     public static event Action RespawnRig;
 
-    private void Awake()
+    private void Start()
     {
         RespawnRig.Invoke();
     }
