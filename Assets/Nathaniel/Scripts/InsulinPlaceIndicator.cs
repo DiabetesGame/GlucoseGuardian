@@ -5,11 +5,13 @@ using UnityEngine;
 public class InsulinPlaceIndicator : MonoBehaviour
 {
     [SerializeField] GameObject staticInsulinKey;
+    InsulinOpener insulinOpener;
 
     // Start is called before the first frame update
     void OnEnable()
     {
         staticInsulinKey.SetActive(false);
+        insulinOpener = GetComponent<InsulinOpener>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -22,7 +24,7 @@ public class InsulinPlaceIndicator : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("InsulinKey"))
+        if (other.gameObject.CompareTag("InsulinKey") && !insulinOpener.keySlotted)
         {
             staticInsulinKey.SetActive(false);
         }
