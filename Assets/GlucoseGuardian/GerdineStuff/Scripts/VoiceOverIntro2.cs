@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 {
     public AudioClip[] clips;
     public GameObject[] objectsToAppearClip1;
+    public GameObject[] objectsToAppearClip2;
     public GameObject[] objectsToAppearClip3;
     public GameObject[] objectsToAppearClip4;
     public Renderer[] objectsToChangeMaterialClip2;
@@ -35,43 +36,20 @@ public class AudioManager : MonoBehaviour
             switch (currentIndex)
             {
                 case 0: // Clip 1: Object 0 appears
-                    foreach (GameObject obj in objectsToAppearClip1)
-                    {
-                        obj.SetActive(true);
-                    }
+                    ActivateObjects(objectsToAppearClip1);
                     break;
-                case 2: // Clip 3: Objects 1, 2, 3 appear
+                case 1: // Clip 2: Object 1 appears
+                    StartCoroutine(DelayedObjectAppearance(objectsToAppearClip2, 5f));
+                    ChangeMaterial(objectsToChangeMaterialClip2, materialsClip2);
+                    break;
+                case 2: // Clip 3: Objects 2, 3 appear
                     StartCoroutine(DelayedClip3ObjectAppearance());
                     break;
                 case 3: // Clip 4: Object 4 appears
-                    foreach (GameObject obj in objectsToAppearClip4)
-                    {
-                        obj.SetActive(true);
-                    }
-                    break;
-                case 1: // Clip 2: Change material on specific objects
-                    if (materialsClip2.Length > 0 && objectsToChangeMaterialClip2.Length > 0)
-                    {
-                        for (int i = 0; i < objectsToChangeMaterialClip2.Length; i++)
-                        {
-                            if (i < materialsClip2.Length)
-                            {
-                                objectsToChangeMaterialClip2[i].material = materialsClip2[i];
-                            }
-                        }
-                    }
+                    ActivateObjects(objectsToAppearClip4);
+                    ChangeMaterial(objectsToChangeMaterialClip4, materialsClip4);
                     break;
                 case 4: // Clip 5: Change material on specific objects
-                    if (materialsClip4.Length > 0 && objectsToChangeMaterialClip4.Length > 0)
-                    {
-                        for (int i = 0; i < objectsToChangeMaterialClip4.Length; i++)
-                        {
-                            if (i < materialsClip4.Length)
-                            {
-                                objectsToChangeMaterialClip4[i].material = materialsClip4[i];
-                            }
-                        }
-                    }
                     break;
                 case 5: // Clip 6: Play animation sequence
                     foreach (Animation anim in animations)
@@ -94,14 +72,38 @@ public class AudioManager : MonoBehaviour
         if (!clip3ObjectsActivated)
         {
             clip3ObjectsActivated = true;
-            foreach (GameObject obj in objectsToAppearClip3)
+            ActivateObjects(objectsToAppearClip3);
+        }
+    }
+
+    IEnumerator DelayedObjectAppearance(GameObject[] objects, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ActivateObjects(objects);
+    }
+
+    void ActivateObjects(GameObject[] objects)
+    {
+        foreach (GameObject obj in objects)
+        {
+            obj.SetActive(true);
+        }
+    }
+
+    void ChangeMaterial(Renderer[] objects, Material[] materials)
+    {
+        if (materials.Length > 0 && objects.Length > 0)
+        {
+            for (int i = 0; i < objects.Length; i++)
             {
-                obj.SetActive(true);
+                if (i < materials.Length)
+                {
+                    objects[i].material = materials[i];
+                }
             }
         }
     }
 }
-
 
 
 

@@ -5,38 +5,23 @@ using UnityEngine.UI;
 
 public class startTutorial : MonoBehaviour
 {
-    public AudioClip audioClip;
     public GameObject[] objectsToDisableOnClick;
     public GameObject[] objectsToEnableOnClick;
-    public AudioSource audioSource;
 
-    private bool audioClipPlayed = false;
     private bool buttonEnabled = false;
-
-    void Awake()
-    {
-        audioSource.clip = audioClip;
-        audioSource.Play();
-    }
 
     void Update()
     {
-        // Check if the audio clip has finished playing
-        if (!audioClipPlayed && !audioSource.isPlaying)
-        {
-            audioClipPlayed = true;
-            buttonEnabled = true;
-        }
-
         // Enable the button after 20 seconds
-        if (buttonEnabled)
+        if (!buttonEnabled && Time.timeSinceLevelLoad > 20f)
         {
+            buttonEnabled = true;
             // Enable the button
             GetComponent<Button>().interactable = true;
         }
     }
 
-    public void ButtonClickHandler()
+    public void ButtonClickHandlerMethod()
     {
         // Disable objectsToDisableOnClick and enable objectsToEnableOnClick
         foreach (GameObject obj in objectsToDisableOnClick)
@@ -47,9 +32,6 @@ public class startTutorial : MonoBehaviour
         {
             obj.SetActive(true);
         }
-
-        // Enable the audio source
-        audioSource.enabled = true;
 
         // Disable the button
         GetComponent<Button>().interactable = false;
