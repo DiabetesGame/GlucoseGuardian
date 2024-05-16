@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     public Renderer[] objectsToChangeMaterialClip4;
     public Material[] materialsClip2;
     public Material[] materialsClip4;
+    public Animator[] animatorsClip4;
     public Animation[] animations;
     private AudioSource audioSource;
     private int currentIndex = 0;
@@ -48,6 +49,7 @@ public class AudioManager : MonoBehaviour
                 case 3: // Clip 4: Object 4 appears
                     ActivateObjects(objectsToAppearClip4);
                     ChangeMaterial(objectsToChangeMaterialClip4, materialsClip4);
+                    ActivateAnimators(animatorsClip4);
                     break;
                 case 4: // Clip 5: Change material on specific objects
                     break;
@@ -103,8 +105,15 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
-}
 
+    void ActivateAnimators(Animator[] animators)
+    {
+        foreach (Animator animator in animators)
+        {
+            animator.enabled = true;
+        }
+    }
+}
 
 
 
