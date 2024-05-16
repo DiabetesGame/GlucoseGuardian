@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PancreasButton : MonoBehaviour
 {
     public Animator avatarAnimator;
-    public AudioSource soundEffect;
-    public GameObject particleSystemObject; // Changed from ParticleSystem to GameObject
+    //public AudioSource soundEffect;
+    //public GameObject particleSystemObject; // Changed from ParticleSystem to GameObject
     [SerializeField] GameObject pancreasParent;
     [SerializeField] GameObject insulinPool;
     private bool buttonPressed = false;
@@ -24,22 +24,22 @@ public class PancreasButton : MonoBehaviour
             // Set the flag to indicate that the button has been pressed
             buttonPressed = true;
 
-            // Invoke a method to play the sound effect after a delay (e.g., 3 seconds)
+/*            // Invoke a method to play the sound effect after a delay (e.g., 3 seconds)
             Invoke("PlaySoundEffect", 3f);
 
             // Invoke a method to enable the particle system after a delay (e.g., 3 seconds)
             Invoke("EnableParticleSystem", 3f);
-
+*/
             // Invoke a method to reset the button press after a delay (e.g., 4 seconds)
             Invoke("ResetButtonPressed", 4f);
 
-            StartCoroutine(DisablePancreasButton());
+            //StartCoroutine(DisablePancreasButton());
 
             insulinPool.GetComponent<ObjPool>().insulinButtonPressed = true;
         }
     }
 
-    // Method to play the sound effect
+/*    // Method to play the sound effect
     private void PlaySoundEffect()
     {
         // Play the sound effect
@@ -51,7 +51,7 @@ public class PancreasButton : MonoBehaviour
     {
         // Enable the particle system GameObject
         particleSystemObject.SetActive(true);
-    }
+    }*/
 
     // Method to reset the button press after a delay
     private void ResetButtonPressed()

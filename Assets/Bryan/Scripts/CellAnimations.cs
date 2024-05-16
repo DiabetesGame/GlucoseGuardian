@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -14,6 +15,7 @@ public class CellAnimations : MonoBehaviour
     public bool isHappy = false;
     MeshCollider collider;
     Rigidbody rigidbody;
+    [SerializeField] InsulinOpener insulinOpener;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class CellAnimations : MonoBehaviour
     {
         isHappy = false;
         gameObject.GetComponent<XRGrabInteractable>().enabled = true;
+        insulinOpener = GetComponentInChildren<InsulinOpener>();
     }
 
     private void OnDisable()
@@ -40,11 +43,14 @@ public class CellAnimations : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        if (other.gameObject.CompareTag("Glucose"))
+        Debug.Log("Open Sesame " + insulinOpener.keySlotted);
+        if (other.gameObject.CompareTag("Glucose") && !isHappy && insulinOpener.keySlotted)
         {
+            Debug.Log("Glucose Triggered");
+            other.gameObject.GetComponentInParent<PooledObject>().used = true;
             other.gameObject.GetComponentInParent<PooledObject>().ReleaseObject();
             ChangeCell();
+            isHappy = true;
         }
     }
 

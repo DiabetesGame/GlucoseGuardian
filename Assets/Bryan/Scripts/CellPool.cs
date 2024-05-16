@@ -71,6 +71,7 @@ public class CellPool : MonoBehaviour
     private void OnDestroyObj(PooledCell obj)
     {
         Destroy(obj.gameObject);
+        spawnedObjects--;
     }
 
     //Spawns a new object every second

@@ -6,6 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ObjIsGrabbed : MonoBehaviour
 {
     public bool grabbed = false;
+    public bool hasBeenGrabbed = false;
     Rigidbody rb;
     Animator animator;
 
@@ -18,6 +19,7 @@ public class ObjIsGrabbed : MonoBehaviour
 
     public void Grabbed(SelectEnterEventArgs args)
     {
+        hasBeenGrabbed = true;
         grabbed = true;
         animator.enabled = false;
     }

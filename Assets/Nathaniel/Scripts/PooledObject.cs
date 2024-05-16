@@ -9,6 +9,7 @@ using UnityEngine.Pool;
 public class PooledObject : MonoBehaviour
 {
     IObjectPool<PooledObject> objPool;
+    public bool used = false;
 
     public void SetPool(IObjectPool<PooledObject> pool)
     {

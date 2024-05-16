@@ -14,12 +14,27 @@ public class ObjPool : MonoBehaviour
     public IObjectPool<PooledObject> pool;
     public bool insulinButtonPressed;
 
+    public int totalCount;
+    public int totalNum;
+
     int spawnedObjects;
 
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
+        //Set numbers based on if its insulin or glucose poolF
+        if (gameObject.CompareTag("InsulinKey"))
+        {
+            totalNum = 9;
+            totalCount = 8;
+        }
+        else
+        {
+            totalNum = 0;
+           
+            totalCount = MyOptions.instance.glucose;
+        }
         //Get spawn and destroy locations
         var transforms = GetComponentsInChildren<Transform>();
         if (transforms != null )
@@ -55,7 +70,8 @@ public class ObjPool : MonoBehaviour
         obj.gameObject.SetActive(true);
         spawnedObjects++;
         obj.transform.position = spawnPoint.position;
-        obj.GetComponent<Animator>().enabled = true;
+        obj.GetComponent<Animator>().enabled = true;        
+
     }
 
     //Sets an object to inactive once it is released
@@ -64,12 +80,18 @@ public class ObjPool : MonoBehaviour
         obj.gameObject.SetActive(false);
         spawnedObjects--;
         obj.GetComponent<Animator>().enabled = false;
-    }
+        if (obj.used)
+        {
+            totalNum++;
+            obj.used = false;
+        }
 
-    //Destroys object
+    }
+    //Destroys object and makes sure its is counted as used
     private void OnDestroyObj(PooledObject obj)
     {
         Destroy(obj.gameObject);
+        spawnedObjects--;
     }
 
     //Spawns a new object every second
@@ -86,12 +108,20 @@ public class ObjPool : MonoBehaviour
 
         while (true)
         {
-            if (spawnedObjects <= maxPoolSize && insulinButtonPressed)
+            if (spawnedObjects + totalNum <= totalCount && insulinButtonPressed)
             {
                 pool.Get();
             }
 
             yield return new WaitForSeconds(1);
+        }
+    }
+    public void InsulinButton()
+    {
+        totalNum -= 4;
+        if (totalNum < 0)
+        {
+            totalNum = 0;
         }
     }
 }
