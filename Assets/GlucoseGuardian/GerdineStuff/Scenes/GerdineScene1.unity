@@ -344,8 +344,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 584407318}
     m_Modifications:
-<<<<<<< Updated upstream
-=======
     - target: {fileID: 155415032615173421, guid: 4ecab951bd76aba438a0be6d2697f254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1066,7 +1064,6 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
->>>>>>> Stashed changes
     - target: {fileID: 6092716648561783584, guid: 4ecab951bd76aba438a0be6d2697f254,
         type: 3}
       propertyPath: m_Name
@@ -1142,8 +1139,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
     - target: {fileID: 7231464126289252631, guid: 4ecab951bd76aba438a0be6d2697f254,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1649,7 +1644,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.08188516
       objectReference: {fileID: 0}
->>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1738,8 +1732,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163810132}
   m_Mesh: {fileID: 6416302070336371891, guid: 88245e33882a4504db38bf31e15e1207, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &170292504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2026,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 288432853}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1001 &333285418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2943,8 +2934,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
-<<<<<<< Updated upstream
-=======
 --- !u!1 &792396945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3148,7 +3137,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
->>>>>>> Stashed changes
 --- !u!1 &918380598
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,13 +3458,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-<<<<<<< Updated upstream
-  m_Intensity: 1
-  m_Range: 10
-=======
   m_Intensity: 0.5
   m_Range: 3
->>>>>>> Stashed changes
   m_SpotAngle: 69.554756
   m_InnerSpotAngle: 52.140205
   m_CookieSize: 10
@@ -3724,8 +3707,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
     - target: {fileID: 1479982177528627309, guid: 71dbe3eb13381f14cb4b884e64ae3d6a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4976,7 +4957,6 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.1629125
       objectReference: {fileID: 0}
->>>>>>> Stashed changes
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7250,29 +7230,17 @@ PrefabInstance:
     - target: {fileID: 1241098351994759041, guid: 906520d14cec7dc48a50d74d704f863b,
         type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< Updated upstream
-      value: -11.2
-=======
       value: -41.63
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1241098351994759041, guid: 906520d14cec7dc48a50d74d704f863b,
         type: 3}
       propertyPath: m_LocalPosition.y
-<<<<<<< Updated upstream
-      value: -18.81
-=======
       value: -25.86
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1241098351994759041, guid: 906520d14cec7dc48a50d74d704f863b,
         type: 3}
       propertyPath: m_LocalPosition.z
-<<<<<<< Updated upstream
-      value: -11.3
-=======
       value: -8.92
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 1241098351994759041, guid: 906520d14cec7dc48a50d74d704f863b,
         type: 3}
@@ -13095,8 +13063,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &3735326407125629644
 GameObject:
   m_ObjectHideFlags: 0
@@ -13134,7 +13100,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
->>>>>>> Stashed changes
 --- !u!33 &3744585295937790627
 MeshFilter:
   m_ObjectHideFlags: 0
