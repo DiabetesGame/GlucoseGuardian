@@ -2,19 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class AudioManager : MonoBehaviour
+public class VoiceOverIntro2 : MonoBehaviour
 {
     public AudioClip[] clips;
     public GameObject[] objectsToAppearClip1;
     public GameObject[] objectsToAppearClip2;
     public GameObject[] objectsToAppearClip3;
     public GameObject[] objectsToAppearClip4;
+    public GameObject[] objectsToAppearClip5;
     public Renderer[] objectsToChangeMaterialClip2;
     public Renderer[] objectsToChangeMaterialClip4;
     public Material[] materialsClip2;
     public Material[] materialsClip4;
     public Animator[] animatorsClip4;
+    public Animator[] animatorsClip5;
     public Animation[] animations;
     private AudioSource audioSource;
     private int currentIndex = 0;
@@ -33,25 +34,29 @@ public class AudioManager : MonoBehaviour
             audioSource.clip = clips[currentIndex];
             audioSource.Play();
 
-            // Clip specific actions
+            Debug.Log("Playing clip: " + audioSource.clip.name);
+
             switch (currentIndex)
             {
                 case 0: // Clip 1: Object 0 appears
                     ActivateObjects(objectsToAppearClip1);
                     break;
-                case 1: // Clip 2: Object 1 appears
-                    StartCoroutine(DelayedObjectAppearance(objectsToAppearClip2, 5f));
+                case 1: // Clip 2: Objects 1 appear
+                    StartCoroutine(DelayedObjectsAppearance(objectsToAppearClip2, 5f));
                     ChangeMaterial(objectsToChangeMaterialClip2, materialsClip2);
                     break;
                 case 2: // Clip 3: Objects 2, 3 appear
-                    StartCoroutine(DelayedClip3ObjectAppearance());
+                    StartCoroutine(DelayedObjectsAppearance(objectsToAppearClip3, 2f));
                     break;
-                case 3: // Clip 4: Object 4 appears
-                    ActivateObjects(objectsToAppearClip4);
-                    ChangeMaterial(objectsToChangeMaterialClip4, materialsClip4);
+                case 3: // Clip 4: Objects 4 appear
+                    StartCoroutine(DelayedObjectAppearance(objectsToAppearClip4[0], 5f)); // Add a delay of 5 seconds
+                    StartCoroutine(DelayedObjectAppearance(objectsToAppearClip4[1], 15f)); // Add a delay of 15 seconds for the second object
+                    StartCoroutine(DelayedMaterialChange(objectsToChangeMaterialClip4, materialsClip4, 15f)); // Add a delay of 20 seconds for material change
                     ActivateAnimators(animatorsClip4);
                     break;
-                case 4: // Clip 5: Change material on specific objects
+                case 4: // Clip 5: Objects 5 appear and enable animators
+                    StartCoroutine(DelayedObjectsAppearance(objectsToAppearClip5, 6f)); // Delay objects appearance by 6 seconds
+                    StartCoroutine(DelayedAnimatorsActivation(animatorsClip5, 0f, 5f)); // Delay animators activation by 5 seconds after initial delay of 0 seconds
                     break;
                 case 5: // Clip 6: Play animation sequence
                     foreach (Animation anim in animations)
@@ -68,20 +73,35 @@ public class AudioManager : MonoBehaviour
         // All clips played, do something
     }
 
-    IEnumerator DelayedClip3ObjectAppearance()
+    IEnumerator DelayedObjectsAppearance(GameObject[] objects, float delay)
     {
-        yield return new WaitForSeconds(audioSource.clip.length / 2f); // Delay appearance halfway through the clip
-        if (!clip3ObjectsActivated)
+        foreach (GameObject obj in objects)
         {
-            clip3ObjectsActivated = true;
-            ActivateObjects(objectsToAppearClip3);
+            yield return new WaitForSeconds(delay);
+            obj.SetActive(true);
         }
     }
 
-    IEnumerator DelayedObjectAppearance(GameObject[] objects, float delay)
+    IEnumerator DelayedObjectAppearance(GameObject obj, float delay)
     {
         yield return new WaitForSeconds(delay);
-        ActivateObjects(objects);
+        obj.SetActive(true);
+    }
+
+    IEnumerator DelayedMaterialChange(Renderer[] objects, Material[] materials, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ChangeMaterial(objects, materials);
+    }
+
+    IEnumerator DelayedAnimatorsActivation(Animator[] animators, float initialDelay, float subsequentDelay)
+    {
+        yield return new WaitForSeconds(initialDelay);
+        foreach (Animator animator in animators)
+        {
+            animator.enabled = true;
+            yield return new WaitForSeconds(subsequentDelay);
+        }
     }
 
     void ActivateObjects(GameObject[] objects)
@@ -114,13 +134,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 }
-
-
-
-
-
-
-
 
 
 

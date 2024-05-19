@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class VoiceOverIntro : MonoBehaviour
 {
     public AudioClip[] audioClips; // Array of audio clips to play
-    public GameObject[] objectsToEnable; // Objects to enable
+    public GameObject[] objectsToEnable; // Objects to enable after all clips are played
+    public GameObject[] objectsToDisable; // Objects to disable after all clips are played
     private AudioSource audioSource; // Audio source to play audio clips
     private int currentClipIndex = 0; // Index to track current audio clip
 
@@ -14,10 +16,22 @@ public class VoiceOverIntro : MonoBehaviour
         // Ensure AudioSource component is attached
         audioSource = GetComponent<AudioSource>();
 
-        // Initially disable all objects
+        // Initially disable all objects to be enabled
         foreach (GameObject obj in objectsToEnable)
         {
             obj.SetActive(false);
+        }
+
+        // Initially enable all objects to be disabled
+        foreach (GameObject obj in objectsToDisable)
+        {
+            obj.SetActive(true);
+        }
+
+        // Start playing the first clip
+        if (audioClips.Length > 0)
+        {
+            PlayNextClip();
         }
     }
 
@@ -26,8 +40,12 @@ public class VoiceOverIntro : MonoBehaviour
         // Check if the current clip has finished playing
         if (!audioSource.isPlaying && currentClipIndex < audioClips.Length)
         {
-            // Play the next clip
             PlayNextClip();
+        }
+        else if (!audioSource.isPlaying && currentClipIndex >= audioClips.Length)
+        {
+            // All clips have finished playing
+            EnableDisableObjects();
         }
     }
 
@@ -38,19 +56,21 @@ public class VoiceOverIntro : MonoBehaviour
             audioSource.clip = audioClips[currentClipIndex];
             audioSource.Play();
             currentClipIndex++;
-
-            // Enable the corresponding object
-            if (currentClipIndex - 1 < objectsToEnable.Length)
-            {
-                objectsToEnable[currentClipIndex - 1].SetActive(true);
-            }
         }
-        else
-        {
-            // If you want the sequence to loop, uncomment the next line
-            // currentClipIndex = 0;
+    }
 
-            // If you want to stop after the last clip, you can add your logic here
+    void EnableDisableObjects()
+    {
+        // Enable the specified objects
+        foreach (GameObject obj in objectsToEnable)
+        {
+            obj.SetActive(true);
+        }
+
+        // Disable the specified objects
+        foreach (GameObject obj in objectsToDisable)
+        {
+            obj.SetActive(false);
         }
     }
 }
