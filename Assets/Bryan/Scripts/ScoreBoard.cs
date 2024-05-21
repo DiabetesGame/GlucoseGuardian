@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class ScoreBoard : MonoBehaviour
 {
+    [Header("End Scene")]
+    [SerializeField] string endScene;
 
     [Header("Object Pools")]
     [SerializeField] ObjPool glucose;
@@ -16,19 +18,27 @@ public class ScoreBoard : MonoBehaviour
     [SerializeField] TMP_Text insulinText;
     [SerializeField] TMP_Text timeText;
 
+    [Header("Fade In Object")]
+    [SerializeField] Renderer planeRenderer; // Renderer of the plane to control opacity
+
     private int glucoseTotal;
     private float currentTime = 0f; // Current time of the timer
+    private SceneChange sceneChange;
+    private Material planeMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
+        sceneChange = GetComponent<SceneChange>();
         glucoseTotal = MyOptions.instance.glucose;
+        planeMaterial = planeRenderer.material;
         StartCoroutine(updateBoard());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void ScoreBoardUpdate()
@@ -36,10 +46,11 @@ public class ScoreBoard : MonoBehaviour
         glucoseText.text = (glucoseTotal - glucose.totalNum).ToString();
         insulinText.text = (9 - insulin.totalNum).ToString();
     }
+
     public IEnumerator updateBoard()
     {
         while (true)
-        {   
+        {
             // Update current time
             currentTime += Time.deltaTime;
 
@@ -52,7 +63,40 @@ public class ScoreBoard : MonoBehaviour
 
             // UpdateBoard
             ScoreBoardUpdate();
+
+            if (glucose.totalNum == glucoseTotal)
+            {
+                StartCoroutine(FadeInObject());
+                while (true)
+                {
+                    yield return null;
+                }
+            }
+
             yield return null;
         }
+    }
+
+    private IEnumerator FadeInObject()
+    {
+        float duration = 2f; // Duration of the fade in seconds
+        float elapsedTime = 0f;
+
+        Color initialColor = planeMaterial.color;
+        Color finalColor = new Color(initialColor.r, initialColor.g, initialColor.b, 1f);
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float alpha = Mathf.Clamp01(elapsedTime / duration);
+            planeMaterial.color = new Color(initialColor.r, initialColor.g, initialColor.b, alpha);
+            yield return null;
+        }
+        planeMaterial.color = finalColor; // Ensure it's fully opaque at the end
+        sceneChange.ChangeScene(endScene);
+    }
+    public void QuitGame()
+    {
+        sceneChange.ChangeScene(endScene);
     }
 }
