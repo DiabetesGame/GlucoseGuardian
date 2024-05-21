@@ -812,6 +812,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3993743969687490968, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5172894369075914857, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: glucose
@@ -831,6 +836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5645170079304060093, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6293236320950931598, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
