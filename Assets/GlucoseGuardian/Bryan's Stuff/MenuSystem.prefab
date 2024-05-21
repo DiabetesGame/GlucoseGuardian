@@ -15655,6 +15655,7 @@ GameObject:
   - component: {fileID: 8635319553071420489}
   - component: {fileID: 4938948763266139255}
   - component: {fileID: 5172894369075914857}
+  - component: {fileID: 3561348546754771538}
   m_Layer: 5
   m_Name: TopMenu
   m_TagString: Untagged
@@ -15776,13 +15777,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 230904d7f08857841a8609cd327fa204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endScene: 
+  endScene: FinalScene
   glucose: {fileID: 0}
   insulin: {fileID: 0}
   glucoseText: {fileID: 6710678217833890346}
   insulinText: {fileID: 4147513554955967634}
   timeText: {fileID: 568770525023765182}
   planeRenderer: {fileID: 0}
+--- !u!114 &3561348546754771538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866709822528320558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d9526bc7eff264bbb575e497c4d401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8871946899875327517
 GameObject:
   m_ObjectHideFlags: 0
