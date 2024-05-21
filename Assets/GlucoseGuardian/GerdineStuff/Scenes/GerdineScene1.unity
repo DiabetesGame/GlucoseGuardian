@@ -3898,7 +3898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &927697661
 Transform:
   m_ObjectHideFlags: 0
@@ -12526,11 +12526,23 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 671488863}
+    - target: {fileID: 570670058625354859, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
+        type: 3}
+      propertyPath: m_text
+      value: GRAPES
+      objectReference: {fileID: 0}
     - target: {fileID: 1561061683358603499, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 671488863}
+    - target: {fileID: 1620644012498822737, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
+        type: 3}
+      propertyPath: m_text
+      value: 'TOAST
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 5545224486615549157, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
         type: 3}
       propertyPath: m_Name
@@ -12541,6 +12553,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 671488863}
+    - target: {fileID: 8781253902472380046, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
+        type: 3}
+      propertyPath: m_text
+      value: CHOCOLATE
+      objectReference: {fileID: 0}
     - target: {fileID: 9079741710991337619, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
         type: 3}
       propertyPath: m_Pivot.x
@@ -13472,27 +13489,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &3420292387868851288
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3735326407125629644}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5bd030b0b98433540afe7d7cab40c9aa, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!23 &3438617964153425278
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13918,7 +13914,7 @@ GameObject:
   - component: {fileID: 8293802468865530710}
   - component: {fileID: 574100720819332921}
   - component: {fileID: 6838265393607219430}
-  - component: {fileID: 3420292387868851288}
+  - component: {fileID: 8293802468865530711}
   m_Layer: 0
   m_Name: Glucose
   m_TagString: Glucose
@@ -24917,6 +24913,27 @@ Transform:
   - {fileID: 2649200736151497683}
   m_Father: {fileID: 584407318}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!95 &8293802468865530711
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3735326407125629644}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26016570521208c44afaf0f3fb4479ef, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!224 &8296287744617150945
 RectTransform:
   m_ObjectHideFlags: 0
