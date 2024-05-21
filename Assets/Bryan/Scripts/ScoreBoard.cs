@@ -45,6 +45,7 @@ public class ScoreBoard : MonoBehaviour
     {
         glucoseText.text = (glucoseTotal - glucose.totalNum).ToString();
         insulinText.text = (9 - insulin.totalNum).ToString();
+        MyOptions.instance.SetTime(Mathf.FloorToInt(currentTime));
     }
 
     public IEnumerator updateBoard()

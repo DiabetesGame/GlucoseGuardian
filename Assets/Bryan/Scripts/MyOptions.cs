@@ -19,4 +19,8 @@ public class MyOptions : MonoBehaviour
     {
         glucose = input;
     }
+    public void SetTime(int input)
+    {
+        time = input;
+    }
 }
