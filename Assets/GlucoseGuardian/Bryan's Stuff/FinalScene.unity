@@ -2686,8 +2686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04d08ebfe03e95d43903410e9c2b634f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultyText: {fileID: 0}
-  timeText: {fileID: 0}
+  difficultyText: {fileID: 1755461435}
+  timeText: {fileID: 1346428294}
 --- !u!4 &9146674314858844227
 Transform:
   m_ObjectHideFlags: 0

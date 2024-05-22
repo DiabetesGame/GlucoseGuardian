@@ -807,7 +807,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1746972301702432404, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2905981782402421641, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3052189697365756453, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4154525562557217970, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: m_IsActive
       value: 1
