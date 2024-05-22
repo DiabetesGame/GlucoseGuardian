@@ -10,6 +10,7 @@ Glucose Guardian is a VR experience made by students of the Virtual and Augmente
 
 ### [Gerdine Oosterwijk](https://github.com/gerdine1)
 - Modelling
+- Animation
 - Subject Matter Expert
 
 ### [Kevin Erick](https://github.com/hibro564)
