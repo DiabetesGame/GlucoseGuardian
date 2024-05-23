@@ -6,7 +6,7 @@ public class MyOptions : MonoBehaviour
 {
     public static MyOptions instance;
 
-    public int glucose;
+    public int gameDifficulty;
     public int time;
     private void Awake()
     {
@@ -17,10 +17,40 @@ public class MyOptions : MonoBehaviour
 
     public void SetGlucose(int input)
     {
-        glucose = input;
+        gameDifficulty = input;
     }
     public void SetTime(int input)
     {
         time = input;
+    }
+    public void DifficultySelect(string tag)
+    {
+        switch (tag)
+        {
+            case "Easy":
+                gameDifficulty = 0;
+                Debug.Log("Easy selected");
+                //Start easy animation
+                break;
+
+            case "Medium":
+                gameDifficulty = 1;
+                Debug.Log("MeduimSelected");
+                //Start Medium Animation
+                break;
+
+            case "Hard":
+                gameDifficulty = 2;
+                Debug.Log("HardSelected");
+                //Start Hard Animation for both food and camera
+                break;
+
+            //By default the difficulty is set to easy
+            default:
+                gameDifficulty = 0;
+                break;
+        }
+
+        Debug.Log("Selected " + tag + "/Difficulty " + gameDifficulty);
     }
 }

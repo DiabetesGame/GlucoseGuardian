@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GlucoseGuardian/Bryan's Stuff/FinalScene.unity
     guid: 447fd39811c387f40b5afe78f5d5f365
+  - enabled: 1
+    path: Assets/GlucoseGuardian/GerdineStuff/Scenes/RestartScene.unity
+    guid: 905f39ff76fc3f0478ca2f375e9cfcfa
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ab21076605411034a877718e88d332d4,
       type: 2}

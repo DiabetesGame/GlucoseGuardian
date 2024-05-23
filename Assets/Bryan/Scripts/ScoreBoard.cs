@@ -30,7 +30,22 @@ public class ScoreBoard : MonoBehaviour
     void Start()
     {
         sceneChange = GetComponent<SceneChange>();
-        glucoseTotal = MyOptions.instance.glucose;
+        if (MyOptions.instance.gameDifficulty == 0)
+        {
+            glucoseTotal = 10;
+        }
+        else if(MyOptions.instance.gameDifficulty == 1)
+        {
+            glucoseTotal = 15;
+        }
+        else if (MyOptions.instance.gameDifficulty == 2)
+        {
+            glucoseTotal = 20;
+        }
+        else
+        {
+            glucoseTotal = 5;
+        }
         planeMaterial = planeRenderer.material;
         StartCoroutine(updateBoard());
     }

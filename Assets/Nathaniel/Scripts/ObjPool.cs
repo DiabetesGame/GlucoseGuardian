@@ -32,8 +32,25 @@ public class ObjPool : MonoBehaviour
         else
         {
             totalNum = 0;
-           
-            totalCount = MyOptions.instance.glucose;
+
+            int difficulty = MyOptions.instance.gameDifficulty;
+
+            if (difficulty == 0)
+            {
+                totalCount = 10;
+            }
+            else if (difficulty == 1)
+            {
+                totalCount = 15;
+            }
+            else if (difficulty == 2)
+            {
+                totalCount = 20;
+            }
+            else
+            {
+                totalCount = 5;
+            }
         }
         //Get spawn and destroy locations
         var transforms = GetComponentsInChildren<Transform>();

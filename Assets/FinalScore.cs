@@ -13,14 +13,14 @@ public class FinalScore : MonoBehaviour
     int time;
     void Start()
     {
-        glucose = MyOptions.instance.glucose;
+        glucose = MyOptions.instance.gameDifficulty;
         time = MyOptions.instance.time;
 
-        if (glucose == 10)
+        if (glucose == 0)
         {
             difficultyText.text = "Easy";
         }
-        else if (glucose == 15)
+        else if (glucose == 1)
         {
             difficultyText.text = "Medium";
         }

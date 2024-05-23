@@ -15,12 +15,12 @@ public class UIManagerScript : MonoBehaviour
     SpinObject spinScript;
     ToolTip toolTipScript;
     ControllerData controllerData;
-    GameManagerScript gameManager;
+    MyOptions gameManager;
     bool triggerChecking;
 
     private void Start()
     {
-        gameManager = GetComponentInParent<GameManagerScript>();
+        gameManager = MyOptions.instance;
     }
 
     //Reference this in the onhover event on each controller

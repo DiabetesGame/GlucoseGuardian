@@ -3206,7 +3206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c57f2c66156144ba4b5b2322a5c313, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glucose: 0
+  gameDifficulty: 0
   time: 0
 --- !u!4 &671488864
 Transform:
@@ -12285,7 +12285,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 534208874457600977, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 671488863}
     - target: {fileID: 570670058625354859, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
@@ -12295,7 +12295,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1561061683358603499, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 671488863}
     - target: {fileID: 1620644012498822737, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
@@ -12312,7 +12312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8714722009175006264, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
         type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 671488863}
     - target: {fileID: 8781253902472380046, guid: 8523ef1f91ca6bb4dbf1e42399c47e89,
