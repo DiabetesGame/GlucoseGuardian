@@ -33,17 +33,15 @@ public class ObjPool : MonoBehaviour
         {
             totalNum = 0;
 
-            int difficulty = MyOptions.instance.gameDifficulty;
-
-            if (difficulty == 0)
+            if (MyOptions.instance.gameDifficulty == 0)
             {
                 totalCount = 10;
             }
-            else if (difficulty == 1)
+            else if (MyOptions.instance.gameDifficulty == 1)
             {
                 totalCount = 15;
             }
-            else if (difficulty == 2)
+            else if (MyOptions.instance.gameDifficulty == 2)
             {
                 totalCount = 20;
             }
