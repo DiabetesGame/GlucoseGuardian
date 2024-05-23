@@ -29,6 +29,10 @@ public class ObjPool : MonoBehaviour
             totalNum = 9;
             totalCount = 8;
         }
+        else if (MyOptions.instance == null)
+        {
+            totalCount = 5;
+        }
         else
         {
             totalNum = 0;

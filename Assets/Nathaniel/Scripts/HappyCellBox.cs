@@ -14,13 +14,15 @@ public class HappyCellBox : MonoBehaviour
     [SerializeField] AudioClip clip;
     Transform animatedCellPosition;
     Transform releasedCellPosition;
+    Rigidbody cellRigidbody;
 
     //Get animator on start
     private void Start()
     {
         animator = GetComponent<Animator>();
-        animatedCellPosition = GetComponentInChildren<CellAnimations>().gameObject.transform;
+        animatedCellPosition = GetComponentInChildren<CellAnimations>().transform;
         Debug.Log(animatedCellPosition.name);
+        animatedCellPosition.gameObject.SetActive(false);
     }
 
     //Get gameobject on trigger enter
@@ -45,6 +47,7 @@ public class HappyCellBox : MonoBehaviour
     IEnumerator DespawnTimer()
     {
         releasedCellPosition = objToDespawn.transform;
+        cellRigidbody = objToDespawn.GetComponent<Rigidbody>();    
         //set transform so it moves with the animation
         //objToDespawn.transform.SetParent(gameObject.transform);
 
@@ -52,15 +55,24 @@ public class HappyCellBox : MonoBehaviour
         interactable = objToDespawn.GetComponent<XRGrabInteractable>();
         interactable.enabled = false;
 
-        //lerp and slerp position/rotation to that of the box
+        //Remove colliders and physics
+        cellRigidbody.isKinematic = true;
+        cellRigidbody.useGravity = false;
+
+        foreach (Collider collider in objToDespawn.GetComponents<Collider>())
+        {
+            collider.enabled = false;
+        }
+
+/*        //lerp and slerp position/rotation to that of the box
         for (float i = 0; i <= 1;)
         {
-            Vector3.Lerp(releasedCellPosition.position, animatedCellPosition.position, i);
-            Vector3.Slerp(releasedCellPosition.rotation.eulerAngles, animatedCellPosition.rotation.eulerAngles, i);
+            Vector3.MoveTowards(releasedCellPosition.position, animatedCellPosition.position, Time.deltaTime);
+            Vector3.MoveTowards(releasedCellPosition.rotation.eulerAngles, animatedCellPosition.rotation.eulerAngles, i);
 
-            i += Time.deltaTime;
-            yield return null;
-        }
+            i += Time.deltaTime / 2;
+            yield return new WaitForSeconds(Time.deltaTime);
+        }*/
 
         //swap models
         objToDespawn.gameObject.GetComponent<PooledCell>().ReleaseObject();
@@ -70,7 +82,9 @@ public class HappyCellBox : MonoBehaviour
         animator.Play("Base Layer.ShrinkAndMove");
 
         //Destroy it after 3 seconds
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2.0f);
+
+        animatedCellPosition.gameObject.SetActive(false);
         Debug.Log("Done");
     }
 }

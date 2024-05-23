@@ -29,6 +29,13 @@ public class CellAnimations : MonoBehaviour
         isHappy = false;
         gameObject.GetComponent<XRGrabInteractable>().enabled = true;
         insulinOpener = GetComponentInChildren<InsulinOpener>();
+        GetComponent<Rigidbody>().isKinematic = false;
+        GetComponent<Rigidbody>().useGravity = true;
+
+        foreach (Collider collider in GetComponents<Collider>())
+        {
+            collider.enabled = true;
+        }
     }
 
     private void OnDisable()
