@@ -30,6 +30,11 @@ public class SpinObject : MonoBehaviour
         if (rigidBody.angularVelocity.y <= 5)
         {
             rigidBody.AddTorque(Vector3.up * speed);
+            rigidBody.angularDrag = 0;
         }
+    }
+    public void StopSpin()
+    {
+        rigidBody.angularDrag = 2;
     }
 }
