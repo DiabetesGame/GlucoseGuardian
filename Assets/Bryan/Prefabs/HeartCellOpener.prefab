@@ -5472,6 +5472,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3887185075125053422, guid: e5cb943b6c447bc478ca4a30e4f82819,
         type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3887185075125053422, guid: e5cb943b6c447bc478ca4a30e4f82819,
+        type: 3}
       propertyPath: m_AABB.m_Center.x
       value: 0.00000009313226
       objectReference: {fileID: 0}
@@ -5644,6 +5649,11 @@ PrefabInstance:
     - target: {fileID: 2210842845293153945, guid: 8293439496d4c484da33072d854f98f7,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2216981602247136223, guid: 8293439496d4c484da33072d854f98f7,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2265099367268417134, guid: 8293439496d4c484da33072d854f98f7,
@@ -6021,6 +6031,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 85806dbedceab5d44b86fd2bd7902e38,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85806dbedceab5d44b86fd2bd7902e38,
         type: 3}
       propertyPath: m_Name
@@ -6171,6 +6186,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 261f80aa085e10447bf1fcc482529940,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 261f80aa085e10447bf1fcc482529940,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 261f80aa085e10447bf1fcc482529940,

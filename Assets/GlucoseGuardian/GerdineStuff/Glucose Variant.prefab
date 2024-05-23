@@ -18,6 +18,11 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3041484267167130490, guid: 6722b65825520ed4a9422a9177cb9515,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3420292388996023656, guid: 6722b65825520ed4a9422a9177cb9515,
         type: 3}
       propertyPath: m_Enabled
