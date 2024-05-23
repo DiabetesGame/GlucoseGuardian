@@ -12,6 +12,11 @@ TagManager:
   - Spawn
   - BrainCell
   - HeartCell
+  - Ray
+  - Hard
+  - Medium
+  - Easy
+  - AnimObj
   layers:
   - Default
   - TransparentFX

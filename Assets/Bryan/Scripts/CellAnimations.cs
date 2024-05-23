@@ -43,7 +43,7 @@ public class CellAnimations : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Open Sesame " + insulinOpener.keySlotted);
+        //Debug.Log("Open Sesame " + insulinOpener.keySlotted);
         if (other.gameObject.CompareTag("Glucose") && !isHappy && insulinOpener.keySlotted)
         {
             Debug.Log("Glucose Triggered");
