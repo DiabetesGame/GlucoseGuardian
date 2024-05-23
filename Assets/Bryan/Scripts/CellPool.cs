@@ -13,6 +13,7 @@ public class CellPool : MonoBehaviour
     public IObjectPool<PooledCell> pool;
 
     int spawnedObjects;
+    int cellNumber = 0;
 
 
     // Start is called before the first frame update
@@ -43,8 +44,7 @@ public class CellPool : MonoBehaviour
     //Creates more objects
     private PooledCell CreateObj()
     {
-        int i = Random.Range(1,4);
-        PooledCell obj = Instantiate(objToSpawn[i-1], spawnPoint.position - spawnOffset, spawnPoint.rotation, transform);
+        PooledCell obj = Instantiate(objToSpawn[cellNumber], spawnPoint.position - spawnOffset, spawnPoint.rotation, transform);
         obj.SetPool(pool);
         return obj;
     }
@@ -82,6 +82,14 @@ public class CellPool : MonoBehaviour
             if (spawnedObjects <= maxPoolSize)
             {
                 pool.Get();
+                if(cellNumber <= 1)
+                {
+                    cellNumber++;
+                }
+                else
+                {
+                    cellNumber = 0;
+                }
             }
 
             yield return new WaitForSeconds(1);

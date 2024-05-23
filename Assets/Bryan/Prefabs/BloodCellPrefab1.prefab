@@ -4898,8 +4898,8 @@ GameObject:
   - component: {fileID: 4217050981694490611}
   - component: {fileID: 1471800781571622348}
   - component: {fileID: 6405398728714386308}
-  - component: {fileID: 3334334726971201957}
   - component: {fileID: 6892658994036865789}
+  - component: {fileID: 3334334726971201957}
   - component: {fileID: 1174609200799394885}
   - component: {fileID: 1029522995018790061}
   - component: {fileID: 6968549539287479599}
@@ -4909,7 +4909,7 @@ GameObject:
   - component: {fileID: 9047525183773568867}
   m_Layer: 0
   m_Name: BloodCellPrefab1
-  m_TagString: HeartCell
+  m_TagString: BloodCell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5006,28 +5006,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3334334726971201957
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8719932708132395356}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7533814063228218806, guid: 1d14311c3453a6545a64ab4c04dfc536, type: 3}
 --- !u!54 &6892658994036865789
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5055,6 +5033,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!64 &3334334726971201957
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8719932708132395356}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -7533814063228218806, guid: 1d14311c3453a6545a64ab4c04dfc536, type: 3}
 --- !u!114 &1174609200799394885
 MonoBehaviour:
   m_ObjectHideFlags: 0
