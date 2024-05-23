@@ -11,7 +11,7 @@ public class ObjDestroyBarrier : MonoBehaviour
 
     private void Start()
     {
-        RespawnRig.Invoke();
+        //RespawnRig.Invoke();
     }
 
     private void OnTriggerEnter(Collider other)

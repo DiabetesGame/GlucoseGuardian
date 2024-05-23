@@ -4955,6 +4955,7 @@ MonoBehaviour:
   HappyCell: {fileID: 7186174609472376159}
   HappySound: {fileID: 1029522995018790061}
   isHappy: 0
+  insulinOpener: {fileID: 0}
 --- !u!33 &1471800781571622348
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5560,6 +5561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeartCellBored
       objectReference: {fileID: 0}
+    - target: {fileID: 2816724842117215059, guid: 8293439496d4c484da33072d854f98f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3196664020343613929, guid: 8293439496d4c484da33072d854f98f7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5962,6 +5968,9 @@ MonoBehaviour:
         m_CallState: 2
   placementMat: {fileID: -876546973899608171, guid: 261f80aa085e10447bf1fcc482529940,
     type: 3}
+  insulin: {fileID: 0}
+  glucose: {fileID: 0}
+  keySlotted: 0
 --- !u!4 &6817545530915130044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 261f80aa085e10447bf1fcc482529940,

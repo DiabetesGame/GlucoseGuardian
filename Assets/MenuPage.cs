@@ -20,6 +20,10 @@ public class MenuPage : MonoBehaviour
 
     private int selectedIndex = 0;
 
+    private void Start()
+    {
+        HighlightCurrentSelection();
+    }
     public int SelectedIndex
     {
         get { return selectedIndex; }
@@ -63,7 +67,6 @@ public class MenuPage : MonoBehaviour
     public void ShowPage()
     {
         gameObject.SetActive(true);
-        ResetSelection();
     }
 
     public void HidePage()
