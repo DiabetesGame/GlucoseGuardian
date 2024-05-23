@@ -9,11 +9,14 @@ TagManager:
   - BloodCell
   - Glucose
   - InsulinKey
+  - Spawn
+  - BrainCell
+  - HeartCell
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grabbables
   - Water
   - UI
   - 
