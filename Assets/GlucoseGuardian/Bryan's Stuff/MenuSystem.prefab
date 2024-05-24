@@ -15057,6 +15057,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuitButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15240,6 +15245,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327122775332102668}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: UpPage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RightMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -15338,6 +15383,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DownButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327122775332102668}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DownPage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RightMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15637,6 +15722,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327122775332102668}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackPage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RightMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15725,6 +15850,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnterButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 327122775332102668}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnterPage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RightMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7704171628717322826, guid: cc0fb5313ca8a77439a4410039a06fb3,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
