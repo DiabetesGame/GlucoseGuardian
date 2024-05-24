@@ -21,8 +21,6 @@ public class SpinObject : MonoBehaviour
         {
             Debug.LogWarning("You forgot to set something!");
         }
-        Debug.Log(difficultyRB.gameObject.name);
-        Debug.Log(difficultyAnimator.gameObject.name);
     }
 
     public void SpinThing()

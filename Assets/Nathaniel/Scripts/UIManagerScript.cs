@@ -65,6 +65,7 @@ public class UIManagerScript : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             if (controllerData.triggered && triggerChecking)
             {
+                Debug.Log("Selected " + spinScript.tag);
                 gameManager.DifficultySelect(spinScript.tag);
                 triggerChecking = false;
             }

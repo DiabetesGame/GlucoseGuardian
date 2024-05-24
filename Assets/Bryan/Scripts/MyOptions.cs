@@ -6,6 +6,9 @@ public class MyOptions : MonoBehaviour
 {
     public static MyOptions instance;
 
+    [SerializeField] SceneChange sceneChanger;
+    [SerializeField] GameObject XRRig;
+
     public int gameDifficulty;
     public int time;
 
@@ -15,6 +18,7 @@ public class MyOptions : MonoBehaviour
         instance = this;
 
         DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(XRRig);
     }
 
     public void SetGlucose(int input)
@@ -52,6 +56,8 @@ public class MyOptions : MonoBehaviour
                 gameDifficulty = 0;
                 break;
         }
+
+        sceneChanger.ChangeScene("testScene 1");
 
         Debug.Log("Selected " + tag + "/Difficulty " + gameDifficulty);
     }
