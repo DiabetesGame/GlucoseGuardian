@@ -8,6 +8,12 @@ public class FinalScore : MonoBehaviour
     [Header("Menus")]
     [SerializeField] TMP_Text difficultyText;
     [SerializeField] TMP_Text timeText;
+
+    [Header("Audio")]
+    EndVoiceOver endVoice;
+    [Header("WaitTimes")]
+    [SerializeField]
+    float pauseForVoice = 2;
     // Start is called before the first frame update
     int glucose;
     int time;
@@ -34,11 +40,23 @@ public class FinalScore : MonoBehaviour
 
         // Display timer
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        StartCoroutine(PauseForLoad());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    
+    IEnumerator PauseForLoad()
+    {
+        float time = 0;
+        while (time < pauseForVoice) 
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        endVoice.PlayClip(glucose);
     }
 }
