@@ -4164,7 +4164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2de78a780ac39744a89c8fc145fefe9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blinkSpeed: 2
+  blinkSpeed: 4
   minIntensity: 0
   maxIntensity: 5
 --- !u!4 &629731921 stripped

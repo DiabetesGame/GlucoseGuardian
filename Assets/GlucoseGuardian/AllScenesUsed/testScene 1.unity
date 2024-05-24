@@ -228,6 +228,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4120151934333659527}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &438100167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5386981531953823456, guid: 109de5c411593a3439205828f3aba4f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 473113442061730284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &471977710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1712,6 +1718,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 471977710}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &555522497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7135687745794718609, guid: 109de5c411593a3439205828f3aba4f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 473113442061730284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &555522499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555522497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cebf782b06fae604a8e608b49f87d25b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarAnimator: {fileID: 1401563492}
+  pancreasParent: {fileID: 438100167}
+  insulinPool: {fileID: 3251000086165984278}
 --- !u!4 &635983861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8666780687488279816, guid: 2d76a261d47317a49b10296bff511d6d,
@@ -2149,7 +2176,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2578f6942fc92a841865626304d5ce50, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.45
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2248,6 +2275,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1401563492 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5228546960979547678, guid: 109de5c411593a3439205828f3aba4f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 473113442061730284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1536749001 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1433148425628886701, guid: 8033576a165a93f4497866856a11feb3,
@@ -4026,6 +4059,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 722136670778358994, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 722136670778358994, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 555522499}
+    - target: {fileID: 722136670778358994, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 722136670778358994, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PancreasButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1152923966239433987, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: m_IsActive
@@ -4226,7 +4279,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackButton
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5685706844824592999, guid: 109de5c411593a3439205828f3aba4f9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -4234,6 +4288,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 41780374}
+    - targetCorrespondingSourceObject: {fileID: 7135687745794718609, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 555522499}
   m_SourcePrefab: {fileID: 100100000, guid: 109de5c411593a3439205828f3aba4f9, type: 3}
 --- !u!4 &568924339621510857
 Transform:
