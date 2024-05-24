@@ -4006,6 +4006,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UpButton
       objectReference: {fileID: 0}
+    - target: {fileID: 290109090120789130, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 742879a40f862a1468f6852db19ff047, type: 2}
     - target: {fileID: 293364563416302213, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: m_IsActive
@@ -4030,8 +4035,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: -7744923810323454639, guid: 9cdd509ffac48aa4b923575d3df3c4ff,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 0f5653c1870b52c4cb07cd0f88b4c1a0, type: 2}
     - target: {fileID: 1746972301702432404, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: m_IsActive
@@ -4042,6 +4046,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2792831512004383354, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 57c3b21293b98104ea1f525a6cfe5608, type: 2}
+    - target: {fileID: 2807515721148099339, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0f5653c1870b52c4cb07cd0f88b4c1a0, type: 2}
     - target: {fileID: 2905981782402421641, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: m_IsActive
@@ -4102,6 +4116,11 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6239129651502814292, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ff74b39ee0537e4bb9105ac33be27f0, type: 2}
     - target: {fileID: 6293236320950931598, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: insulinPool
@@ -4122,6 +4141,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8017478553238307021, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 742879a40f862a1468f6852db19ff047, type: 2}
     - target: {fileID: 8186253089630722873, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
