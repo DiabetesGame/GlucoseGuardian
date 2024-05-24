@@ -8,6 +8,8 @@ public class MyOptions : MonoBehaviour
 
     public int gameDifficulty;
     public int time;
+
+    public bool quitGame;
     private void Awake()
     {
         instance = this;
