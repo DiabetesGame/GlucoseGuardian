@@ -15,14 +15,15 @@ public class HappyCellBox : MonoBehaviour
     Transform animatedCellPosition;
     Transform releasedCellPosition;
     Rigidbody cellRigidbody;
+    AudioSource boxAudio;
 
     //Get animator on start
     private void Start()
     {
         animator = GetComponent<Animator>();
         animatedCellPosition = GetComponentInChildren<CellAnimations>().transform;
-        Debug.Log(animatedCellPosition.name);
         animatedCellPosition.gameObject.SetActive(false);
+        boxAudio = GetComponent<AudioSource>();
     }
 
     //Get gameobject on trigger enter
@@ -46,6 +47,8 @@ public class HappyCellBox : MonoBehaviour
     //Play an animation, and despawn the object after 3 seconds
     IEnumerator DespawnTimer()
     {
+        boxAudio.PlayOneShot(clip);
+
         releasedCellPosition = objToDespawn.transform;
         cellRigidbody = objToDespawn.GetComponent<Rigidbody>();    
         //set transform so it moves with the animation
