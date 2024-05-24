@@ -10,7 +10,7 @@ public class FinalScore : MonoBehaviour
     [SerializeField] TMP_Text timeText;
 
     [Header("Audio")]
-    EndVoiceOver endVoice;
+    [SerializeField] EndVoiceOver endVoice;
     [Header("WaitTimes")]
     [SerializeField]
     float pauseForVoice = 2;
@@ -57,6 +57,18 @@ public class FinalScore : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        endVoice.PlayClip(glucose);
+        if (MyOptions.instance.quitGame)
+        {
+            endVoice.PlayClip(3);
+        }
+        else
+        {
+            endVoice.PlayClip(glucose);
+        }
+        while (endVoice.audioSource.isPlaying)
+        {
+            yield return null;
+        }
+        endVoice.PlayClip(4);
     }
 }
