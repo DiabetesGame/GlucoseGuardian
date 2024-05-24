@@ -17,7 +17,7 @@ public class ControllerData : MonoBehaviour
     void Update()
     {
         triggerVal = triggerProperty.action.ReadValue<float>();
-        if (triggerVal == 1)
+        if (triggerVal >= 0.8)
         {
             triggered = true;
         }

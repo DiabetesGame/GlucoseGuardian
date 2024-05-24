@@ -13,14 +13,14 @@ public class CellAnimations : MonoBehaviour
     [SerializeField] AudioSource HappySound;
 
     public bool isHappy = false;
-    MeshCollider collider;
+    MeshCollider cellCollider;
     Rigidbody rigidbody;
     [SerializeField] InsulinOpener insulinOpener;
 
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<MeshCollider>();
+        cellCollider = GetComponent<MeshCollider>();
         rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -65,9 +65,9 @@ public class CellAnimations : MonoBehaviour
     {
         openCell.clip = animationClips[0];
         openCell.Play();
-        collider.convex = false;
-        rigidbody.useGravity = false;
-        rigidbody.isKinematic = true;
+        //cellCollider.convex = false;
+        //rigidbody.useGravity = false;
+        //rigidbody.isKinematic = true;
     }
     public void CloseCell()
     {
@@ -90,9 +90,8 @@ public class CellAnimations : MonoBehaviour
         }
 
         isHappy = true;
-        rigidbody.isKinematic = false;        
-        rigidbody.useGravity = true;
-        collider.convex = true;
-
+        //rigidbody.isKinematic = false;
+        //rigidbody.useGravity = true;
+        //cellCollider.convex = true;
     }
 }

@@ -89,8 +89,9 @@ public class ObjPool : MonoBehaviour
         obj.gameObject.SetActive(true);
         spawnedObjects++;
         obj.transform.position = spawnPoint.position;
-        obj.GetComponent<Animator>().enabled = true;        
-
+        obj.GetComponent<Animator>().enabled = true;
+        obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        obj.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 
     //Sets an object to inactive once it is released

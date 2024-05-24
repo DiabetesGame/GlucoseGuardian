@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class SpinObject : MonoBehaviour
 {
-    Animator animator;
-    Rigidbody rigidBody;
+    [SerializeField] Animator difficultyAnimator;
+    [SerializeField] Rigidbody difficultyRB;
     int speed = 2;
 
     // Start is called before the first frame update
@@ -14,27 +14,28 @@ public class SpinObject : MonoBehaviour
     {
         try
         {
-            animator = GetComponentInChildren<Animator>();
-            rigidBody = GetComponentInChildren<Rigidbody>();
+            difficultyRB = GetComponentInChildren<Rigidbody>();
+            difficultyAnimator = gameObject.GetComponentInChildren<Animator>();
         }
         catch(NullReferenceException)
         {
             Debug.LogWarning("You forgot to set something!");
         }
-
+        Debug.Log(difficultyRB.gameObject.name);
+        Debug.Log(difficultyAnimator.gameObject.name);
     }
 
     public void SpinThing()
     {
-        animator.Play("Base Layer.RaiseAndSpin");
-        if (rigidBody.angularVelocity.y <= 5)
+        difficultyAnimator.Play("Base Layer.RaiseAndSpin");
+        if (difficultyRB.angularVelocity.y <= 5)
         {
-            rigidBody.AddTorque(Vector3.up * speed);
-            rigidBody.angularDrag = 0;
+            difficultyRB.AddTorque(Vector3.up * speed);
+            difficultyRB.angularDrag = 0;
         }
     }
     public void StopSpin()
     {
-        rigidBody.angularDrag = 2;
+        difficultyRB.angularDrag = 2;
     }
 }

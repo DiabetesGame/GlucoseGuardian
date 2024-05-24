@@ -4808,7 +4808,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ffd99770214a9a84a8dccbc32f49613d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 73.75608
+      value: 55.72641
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffd99770214a9a84a8dccbc32f49613d,
         type: 3}
@@ -4828,7 +4828,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ffd99770214a9a84a8dccbc32f49613d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.612
+      value: 1.735
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffd99770214a9a84a8dccbc32f49613d,
         type: 3}
@@ -5959,6 +5959,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 568924339621510857}
     m_Modifications:
+    - target: {fileID: 1186341062315041818, guid: d7045223504b7c04f840ed00e5d48dbc,
+        type: 3}
+      propertyPath: m_Name
+      value: CellSpawner
+      objectReference: {fileID: 0}
     - target: {fileID: 3462333903008555569, guid: d7045223504b7c04f840ed00e5d48dbc,
         type: 3}
       propertyPath: objToSpawn.Array.data[0]

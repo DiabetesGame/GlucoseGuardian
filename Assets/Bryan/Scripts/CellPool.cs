@@ -14,6 +14,7 @@ public class CellPool : MonoBehaviour
 
     int spawnedObjects;
     int cellNumber = 0;
+    Quaternion spawnRotation;
 
 
     // Start is called before the first frame update
@@ -44,7 +45,10 @@ public class CellPool : MonoBehaviour
     //Creates more objects
     private PooledCell CreateObj()
     {
-        PooledCell obj = Instantiate(objToSpawn[cellNumber], spawnPoint.position - spawnOffset, spawnPoint.rotation, transform);
+        //Randomize the spawn rotation for funsies :)
+        spawnRotation = RandomSpawnRotation();
+
+        PooledCell obj = Instantiate(objToSpawn[cellNumber], spawnPoint.position - spawnOffset, spawnRotation, transform);
         obj.SetPool(pool);
         return obj;
     }
@@ -55,6 +59,8 @@ public class CellPool : MonoBehaviour
         obj.gameObject.SetActive(true);
         spawnedObjects++;
         obj.transform.position = spawnPoint.position;
+        obj.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        obj.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         //obj.GetComponent<Animator>().enabled = true;
     }
 
@@ -72,6 +78,18 @@ public class CellPool : MonoBehaviour
     {
         Destroy(obj.gameObject);
         spawnedObjects--;
+    }
+
+    //Creates a random quaternion to apply to the spawned object's rotational value
+    Quaternion RandomSpawnRotation()
+    {
+        Quaternion randomRotation = new Quaternion();
+
+        randomRotation.x = Random.Range(-1f, 1f);
+        randomRotation.y = Random.Range(-1f, 1f);
+        randomRotation.z = Random.Range(-1f, 1f);
+
+        return randomRotation;
     }
 
     //Spawns a new object every second
