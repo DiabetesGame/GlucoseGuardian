@@ -115,4 +115,10 @@ public class ScoreBoard : MonoBehaviour
     {
         sceneChange.ChangeScene(endScene);
     }
+
+    public bool IsTimerRunning()
+    {
+        return glucose.totalNum != glucoseTotal;
+    }
+
 }
