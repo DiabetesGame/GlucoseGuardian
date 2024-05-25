@@ -58,6 +58,8 @@ public class MyOptions : MonoBehaviour
         }
 
         sceneChanger.ChangeScene("testScene 1");
+        XRRig.transform.position = new Vector3(-5.4f, 49f, 16.5f);
+        XRRig.transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
 
         Debug.Log("Selected " + tag + "/Difficulty " + gameDifficulty);
     }
