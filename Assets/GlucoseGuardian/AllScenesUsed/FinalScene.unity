@@ -3139,6 +3139,7 @@ MonoBehaviour:
   timeText: {fileID: 1346428294}
   endVoice: {fileID: 2085995501}
   pauseForVoice: 2
+  Joe: {fileID: 2076951927}
 --- !u!4 &9146674314858844227
 Transform:
   m_ObjectHideFlags: 0

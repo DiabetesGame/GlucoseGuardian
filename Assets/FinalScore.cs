@@ -14,6 +14,9 @@ public class FinalScore : MonoBehaviour
     [Header("WaitTimes")]
     [SerializeField]
     float pauseForVoice = 2;
+
+    [SerializeField]
+    GameObject Joe;
     // Start is called before the first frame update
     int glucose;
     int time;
@@ -41,6 +44,10 @@ public class FinalScore : MonoBehaviour
         // Display timer
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
         StartCoroutine(PauseForLoad());
+        if (MyOptions.instance.quitGame)
+        {
+            Joe.SetActive(false);
+        }
     }
 
     // Update is called once per frame
