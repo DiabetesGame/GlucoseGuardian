@@ -44,7 +44,7 @@ public class ScoreBoard : MonoBehaviour
         }
         else
         {
-            glucoseTotal = 5;
+            glucoseTotal = 4;
         }
         planeMaterial = planeRenderer.material;
         StartCoroutine(updateBoard());
