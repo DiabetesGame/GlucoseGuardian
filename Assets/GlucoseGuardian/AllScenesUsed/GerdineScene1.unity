@@ -3110,7 +3110,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneChanger: {fileID: 671488865}
-  XRRig: {fileID: 1402644616885849485}
   gameDifficulty: 0
   time: 0
   quitGame: 0
