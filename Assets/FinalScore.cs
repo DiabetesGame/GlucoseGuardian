@@ -59,6 +59,11 @@ public class FinalScore : MonoBehaviour
         }
         if (MyOptions.instance.quitGame)
         {
+            endVoice.PlayClip(5);
+            while (endVoice.audioSource.isPlaying)
+            {
+                yield return null;
+            }
             endVoice.PlayClip(3);
         }
         else
