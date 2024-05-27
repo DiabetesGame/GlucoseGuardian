@@ -4540,11 +4540,21 @@ PrefabInstance:
     - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 178967292}
+    - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1381608592}
     - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
@@ -4554,12 +4564,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: ChangeScene
       objectReference: {fileID: 0}
     - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ScoreBoard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SceneChange, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
@@ -4569,7 +4594,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
         type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: FinalScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
       propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8814245219557030652, guid: 109de5c411593a3439205828f3aba4f9,
+        type: 3}
+      propertyPath: OnPress.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8852481743065643432, guid: 109de5c411593a3439205828f3aba4f9,

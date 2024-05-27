@@ -113,6 +113,7 @@ public class ScoreBoard : MonoBehaviour
     }
     public void QuitGame()
     {
+        MyOptions.instance.quitGame = true;
         sceneChange.ChangeScene(endScene);
     }
 
