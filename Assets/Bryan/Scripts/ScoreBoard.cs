@@ -32,15 +32,15 @@ public class ScoreBoard : MonoBehaviour
         sceneChange = GetComponent<SceneChange>();
         if (MyOptions.instance.gameDifficulty == 0)
         {
-            glucoseTotal = 10;
+            glucoseTotal = 4;
         }
         else if(MyOptions.instance.gameDifficulty == 1)
         {
-            glucoseTotal = 15;
+            glucoseTotal = 8;
         }
         else if (MyOptions.instance.gameDifficulty == 2)
         {
-            glucoseTotal = 20;
+            glucoseTotal = 12;
         }
         else
         {
