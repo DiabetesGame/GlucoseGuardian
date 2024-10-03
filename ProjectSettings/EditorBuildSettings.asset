@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/GlucoseGuardian/AllScenesUsed/GerdineScene1.unity
     guid: c0b5f69ebb74848418d6fbd274e6fecf
-  - enabled: 1
+  - enabled: 0
     path: Assets/GlucoseGuardian/AllScenesUsed/testScene 1.unity
     guid: a5ee51424d3d9664ebe9b5ee83bf082e
   - enabled: 0
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/GlucoseGuardian/AllScenesUsed/RestartScene.unity
     guid: 905f39ff76fc3f0478ca2f375e9cfcfa
+  - enabled: 1
+    path: Assets/GlucoseGuardian/AllScenesUsed/StandAlone.unity
+    guid: aa19dc7cfcc7fa149870d2e0bb193e35
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ab21076605411034a877718e88d332d4,
       type: 2}
