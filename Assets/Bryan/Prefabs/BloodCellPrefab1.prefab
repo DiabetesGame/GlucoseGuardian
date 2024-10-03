@@ -72,7 +72,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6099172723953330250
 Transform:
   m_ObjectHideFlags: 0
@@ -5529,7 +5529,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e5cb943b6c447bc478ca4a30e4f82819,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5590,7 +5590,7 @@ PrefabInstance:
     - target: {fileID: 143331138858255092, guid: 71dbe3eb13381f14cb4b884e64ae3d6a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 160264419937870255, guid: 71dbe3eb13381f14cb4b884e64ae3d6a,
         type: 3}
@@ -6009,6 +6009,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85806dbedceab5d44b86fd2bd7902e38,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85806dbedceab5d44b86fd2bd7902e38,
+        type: 3}
       propertyPath: m_TagString
       value: ShowInsulin
       objectReference: {fileID: 0}
@@ -6178,6 +6183,11 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 261f80aa085e10447bf1fcc482529940,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 261f80aa085e10447bf1fcc482529940,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 261f80aa085e10447bf1fcc482529940,
