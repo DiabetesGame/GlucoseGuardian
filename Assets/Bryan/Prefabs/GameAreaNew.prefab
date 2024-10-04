@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objToSpawn:
-  - {fileID: 5013058745920174897, guid: 14a3be59acc04cd41849474661b1cc1f, type: 3}
+  - {fileID: 2110690590017865584, guid: 230ce0bffda128d46b98b8c65d814b93, type: 3}
   - {fileID: 2110690590017865584, guid: c0273bcbc928aae46872121bebed1707, type: 3}
   - {fileID: 3670286078787826710, guid: 8033576a165a93f4497866856a11feb3, type: 3}
   maxPoolSize: 2

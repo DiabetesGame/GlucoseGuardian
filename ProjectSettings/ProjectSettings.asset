@@ -160,7 +160,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.LethbridgeCollege.GlucoseGuardianStandAlone
-    Standalone: com.LethbridgeCollege.GlucoseGuardian
+    Standalone: com.LethbridgeCollege.GlucoseGuardianStandAlone
     iPhone: com.Unity-Technologies.com.unity.template.urp-blank
   buildNumber:
     Standalone: 0
